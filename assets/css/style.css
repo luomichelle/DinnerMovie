@@ -1,0 +1,240 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+/*LOGIN FORM*/
+.login-form{
+        margin-top:150px;
+        height:300px;
+    }
+
+.card{
+          background: rgba(0, 0, 0, 0.9) !IMPORTANT;
+    }
+
+h1,input{
+        color:white;
+
+    }
+
+
+/*RESPONSIVENESS*/
+@media screen and (max-width: 780px) {
+    .container {
+        width:100% !IMPORTANT;
+    }
+}
+
+
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: no-repeat;
+    background: no-repeat;
+    background-size:cover;
+}
+
+h5,h6{
+    color:#80cbc4;
+}
+
+.logo{
+    margin-top:80px;
+    margin-bottom:150px;
+    height:300px;
+}
+
+/*INPUT FIELDS*/
+.form{
+    background: rgba(0, 0, 0, 0.8);
+    padding:30px;
+
+}
+
+
+
+.select-wrapper input.select-dropdown {
+    color:white;
+    width:100px;
+}
+
+#movie, #restaurant{
+	width:650px;
+    color:white;
+}
+
+#zipCode{
+	width:100px;
+    color:white;
+}
+
+#state,#city{
+    width:100px;
+    color:white;
+}
+
+#address{
+    width:275px;
+    margin:0.5%;
+    color:white;
+}
+
+/*OUTPUTS*/
+/*RESTAURANT*/
+.outputDiv{
+    margin-top:100px;
+	margin-bottom:50px;
+	background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+	padding:100px;
+	height:600px;
+    width:100%;
+}
+
+.restaurantOutput{
+       height:400px;
+       overflow:auto;
+       overflow:scroll;
+}
+
+
+.bottom-sheet{
+    height:600px;
+    background: rgba(0, 0, 0, 0.9) !IMPORTANT;
+    color:white;
+}
+
+.input-field{
+    width:60px;
+    margin:0px !IMPORTANT;
+    position:relative;
+}
+.movieSquare{
+	width:50px;
+	height:100px;
+	background-color:black !IMPORTANT;
+
+}
+
+/*MOVIE*/
+.outputDiv{
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    height:700px;
+    position:relative;
+}
+.movieSquare{
+    width:50px;
+    height:100px;
+    background-color:black !IMPORTANT;
+
+}
+
+div.phase1 {
+    overflow: auto;
+    overflow-x:hidden;
+    height:50%;
+}
+div.phase2 {
+    height: 50%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.phases{
+    height:100%;
+}
+.movieDiv{
+    height:100%;
+}
+div.outputs {
+    margin: 0 10px 20px 0;
+    margin-left: 1%;
+    padding: 1px;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+}
+
+.input-field {
+    margin-top: 1rem;
+    max-width: 40px
+}
+
+div-movielist {
+    text-align: center;
+    overflow: auto;
+    position: relative;
+    float: left;
+    margin: 0px 9px 5px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+button.movie {
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.movieIntro{
+    position:relative;
+    margin-left: 3%;
+}
+
+div-showtime {
+    text-align: center;
+    width: 93%;
+    overflow: auto;
+    float: left;
+    margin: 0px 9px 5px 3%;
+    background: rgba(255, 255, 255, 0.16);
+    padding-bottom: 20px;
+    height: 200px;
+    margin: 10px;
+}
+
+div.moviepicture {
+    height:80%;
+}
+
+img.movieImg{
+   height:100%;
+}
+
+
+/*MODALS*/
+.outputsChoices{
+    width:100%;
+    height:300px;
+}
+.movieRestoModal{
+    width:60%;   
+    height:350px;
+}
+.movieOutputModal{
+    width:100%;
+    height:150px;
+}
+.restaurantOuputModal{
+    width:100%;
+    height:150px;
+}
+.mapOutputModal{
+    height:300px;
+    width:35%;
+}
+
+
+/*Log Out*/
+.logout{
+    color:white;
+}

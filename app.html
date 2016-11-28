@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="icon" href="assets/images/icon.ico">
+  <title>Dinner and a Movie -- Main Page</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="assets/css/materialize/css/materialize.css">
+  <script type="text/javascript" src="assets/javascript/jquery-3.1.0.min.js"></script>
+  <!-- Materialize JS -->
+  <script src="assets/css/materialize/js/materialize.js"></script>
+  <!-- Front-End JS -->
+  <script type="text/javascript" src="assets/javascript/front-end.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <video autoplay loop muted  id="background">   
+        <source src="assets/video/background.mp4" type="video/mp4">
+  </video>
+
+
+<!-- Logo -->
+	<div class="center-align logo">
+			<img class="logo" src="assets/images/logo.png">
+	</div>
+
+<div class="row form">
+  <form onsubmit="return false">
+  <div class="col s6">
+  <!-- Address ID:address -->
+    <input class ="inputbox" type="text" id="address" placeholder="Address">
+  <!-- Zip ID: zipCode -->
+    <input class ="inputbox" type="number" id="zipCode" placeholder="Zip">
+    <!-- City ID: city -->
+    <input class ="inputbox" type="text" id="city" placeholder="City">
+    <!-- State ID: state-->
+    <input class ="inputbox" type="text" id="state" placeholder="State">
+   </div>
+
+  <div class="col s6">
+         <!-- ID: searchCriteria -->
+            <select id="searchCriteria">
+              <option>Rating</option>
+              <option>Cost</option>
+              <option>Distance</option>
+            </select>
+        <!-- ID: searchOrder -->
+            <select id="searchOrder">
+                 <option>High</option>
+                 <option>Low</option>
+           </select>
+
+             <div class="headerbutton">
+      <!-- Submit Button ID: submit -->
+      <button class="red lighten-3 btn" type="submit" id="submit"> <i class="material-icons">input</i> Submit </button>
+    </form>
+  </div>
+  </div>
+</div>
+
+<!-- Logout Class: form-signin -->
+  <div class="form-signin">
+  </div>
+
+<div class="container">
+<!-- Restaurant Output -->
+<a name="restaurantOutputDiv"></a> 
+  <div class="outputDiv">
+    <h5> Pick a restaurant </h5>
+<!-- restaurantOutput id:restaurantOutput -->
+<!-- Where to put the results from the query -->
+    <div class="restaurantOutput" id="restaurantOutput">
+    </div>
+</div>
+
+
+ <!--Movie Output !-->
+<a name="movieOutputDiv"></a> 
+ <div class="outputDiv"> 
+  <div class="row movieDiv">
+    <div class="phases col s6">
+      <h5 class="movieIntro"> Choose Your Movie </h5>
+      <div class="phase1">
+      <!-- ID:movieContainer -->
+        <div class="movieNames" id="movieContainer">
+        <!-- ID:movielist -->
+            <div class="div-movielist"></div>
+        </div>
+      </div>
+
+      <h5 class="movieIntro"> Choose Your Showtime </h5>
+      <div class="phase2">
+       <!-- ID:showtimeContainer -->
+         <div id="showtimeContainer"></div>
+        <!-- ID:selectionContainer -->
+         <div id="selectionContainer"></div>
+         <!-- Don't delete mapdiv below need to get movie theater address though no display-->
+         <div id="mapdiv"></div>
+      </div>
+     </div>
+
+     <div class="moviepicture col s6">
+          <img class="movieImg" id="movieImage">
+            <div class="movieRated" id="movieRating"> </div>
+      </div>
+    </div>   
+  </div>
+</div>
+
+<!-- Side scroll -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red lighten-3">
+      <i class="large material-icons">star</i>
+    </a>
+    <ul>
+       <li><a class="btn-floating teal lighten-2" href="#restaurantOutputDiv"><i class="material-icons">store</i></a></li>
+       <li><a class="btn-floating teal lighten-2" href="#movieOutputDiv"><i class="material-icons">theaters</i></a></li>
+       <li><a class="btn-floating teal lighten-2 modal-trigger" href="#modal1"><i class="material-icons">library_add</i></a></li>
+    </ul>
+ </div>
+
+
+<!-- Itinerary -->
+<div id="modal1" class="modal bottom-sheet">
+<div class="row">
+   <div class="modal-content">
+     <div class="outputsChoices col s12">
+     	<div class="row">
+     		<div class="movieRestoModal col s6">
+     		<!--RESTO ID: restaurantOputputModal -->
+        <!-- Where to output chosen restaurant -->
+        <h6> Restaurant Choice </h6>
+     				<div class="restaurantOuputModal" id="restaurantOutputModal">
+     				</div>
+     		<!-- MOVIE ID: movieOutputModal -->
+        <!-- Where to output chosen movie and theatre -->
+          <h6> Movie Choice </h6>
+     				<div class="movieOutputModal" id="movieOutputModal">
+     				</div>
+     		</div>
+     		<!-- MAP ID: mapOutputModal -->
+           <h6> Map </h6>
+        <!-- Where to put MAP location of both movie and theatre -->
+     		<div class="mapOutputModal col s6" id="mapOutputModal">
+     		</div>
+     	</div>
+     </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+<!-- Custom javascript -->
+<script src="assets/javascript/creds.js"></script>
+<script src="assets/javascript/auth-logic.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCXM-2P4McxM6KX4Nr4dURfIYOVSUKhPo&libraries=places"></script>
+<script stype="text/javascript" src="assets/javascript/moment.js"></script>
+<script type="text/javascript" src="assets/javascript/movieapp.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+</body>
+
+</html>
